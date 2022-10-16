@@ -44,7 +44,6 @@ public class App {
     public static void guessingGame(int numberToGuess) {
         Scanner scanner = new Scanner(System.in);
         int guess = 0;
-        boolean guessedCorrectly = false;
         int guessCount = 1;
 
         while (guessCount <= 10) {
@@ -58,18 +57,14 @@ public class App {
             }
 
             if (guess == numberToGuess) {
-                guessedCorrectly = true;
-                break;
+                System.out.println("You won wisenheimer!");
+                return;
             }
 
             guessCount++;
         }
 
-        if (guessedCorrectly) {
-            System.out.println("You won wisenheimer!");
-        } else {
-            System.out.println("You lost! Have you ever heard of divide & conquer?");
-        }
+        System.out.println("You lost! Have you ever heard of divide & conquer?");
     }
 
     public static int randomNumberBetweenOneAndHundred() {
